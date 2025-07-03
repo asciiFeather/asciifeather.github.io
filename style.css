@@ -1,7 +1,29 @@
 body {
-  margin: 0;
-  overflow: hidden;
+  font-family: sans-serif;
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+  background: #f9f9f9;
+  color: #333;
 }
-canvas {
-  display: block;
+
+h1 {
+  font-size: 2rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

@@ -2,13 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="google-adsense-account" content="ca-pub-7192839962173120">
-  <title>asciiFeather's website</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Forumspace</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
-  <script src="main.js"></script>
+  <main>
+    <h1>📝 Forumspace (Frank Ocean blog site)</h1>
+    <ul id="post-list"></ul>
+  </main>
+
+  <script>
+    // List of posts: title + file name
+    const posts = [
+      { title: "Frank Ocean", file: "frankocean.md" },
+    ];
+
+    const list = document.getElementById("post-list");
+    posts.forEach(post => {
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="post.html?file=${encodeURIComponent(post.file)}">${post.title}</a>`;
+      list.appendChild(li);
+    });
+  </script>
 </body>
 </html>
